@@ -1,12 +1,15 @@
 {
-  "userid": "",
-  "password": "",
-  "account": "",
+  "userid": "sudhir@smartechie.com",
+  "password": "itsPrivateDude",
+  "account": "axyz123",
 
   "test": {
-    "warehouse": "",
-    "database": "",
-    "schema": "",
-    "tables": [""]
+    "warehouse": "DATAVERSE_WH",
+    "database": "DATAVERSE_DB_DEV",
+    "schema": "DEV_SMARTECHIE",
+    "tables": ["DATAVERSE_WHITE_BOARD"],
+    "meta_info": {
+      "DATAVERSE_WHITE_BOARD": "CREATE TABLE IF NOT EXISTS DATAVERSE_WHITE_BOARD ( TENANT_ID VARCHAR(100), TENANT_NAME   VARCHAR(100),CITY VARCHAR(100), ZIP NUMBER(9), CREATED_DATE  DATE, UPDATED_DATE  DATE ) CLUSTER BY (TENANT_ID) COMMENT = 'The R2_DATAVERSE_WHITE_BOARD Dummy table for flow testing by Sudhir';"
+    }
   }
 }
