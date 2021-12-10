@@ -1,6 +1,6 @@
 #from snowflake.connector.connection import SnowflakeConnection
 
-def init_environment(conn ,warehouse: str, database: str, schema: str, tables: list):
+def init_environment(conn ,warehouse: str, database: str, schema: str, tables_info: dict[str, str]):
   # Creating a Database, Schema, and Warehouse
   #conn.cursor().execute(f"CREATE WAREHOUSE IF NOT EXISTS {warehouse.upper()}")
   conn.cursor().execute(f"USE WAREHOUSE {warehouse.upper()}")
@@ -11,17 +11,7 @@ def init_environment(conn ,warehouse: str, database: str, schema: str, tables: l
   conn.cursor().execute(f"CREATE SCHEMA IF NOT EXISTS {schema.upper()}")
   conn.cursor().execute(f"USE SCHEMA {database.upper()}.{schema.upper()}")
 
-  conn.cursor().execute(
-        '''
-        CREATE TABLE IF NOT EXISTS DATAVERSE_WHITE_BOARD (
-            TENANT_ID     VARCHAR(100),
-            TENANT_NAME   VARCHAR(100),
-            CITY          VARCHAR(100),
-            ZIP           NUMBER(9),
-            CREATED_DATE  DATE,
-            UPDATED_DATE  DATE
-            )
-                CLUSTER BY (TENANT_ID)
-                COMMENT = 'The DATAVERSE_WHITE_BOARD Dummy table for flow testing by Sudhir';
-        ''')
+
+  for table_def in tables_info:
+    conn.cursor().execute(table_def)
 
