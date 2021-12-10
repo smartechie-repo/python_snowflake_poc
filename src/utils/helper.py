@@ -13,7 +13,7 @@ def init_environment(conn ,warehouse: str, database: str, schema: str, tables: l
 
   conn.cursor().execute(
         '''
-        CREATE TABLE IF NOT EXISTS R2_DATAVERSE_WHITE_BOARD (
+        CREATE TABLE IF NOT EXISTS DATAVERSE_WHITE_BOARD (
             TENANT_ID     VARCHAR(100),
             TENANT_NAME   VARCHAR(100),
             CITY          VARCHAR(100),
@@ -22,6 +22,6 @@ def init_environment(conn ,warehouse: str, database: str, schema: str, tables: l
             UPDATED_DATE  DATE
             )
                 CLUSTER BY (TENANT_ID)
-                COMMENT = 'The R2_DATAVERSE_WHITE_BOARD Dummy table for flow testing by Sudhir';
+                COMMENT = 'The DATAVERSE_WHITE_BOARD Dummy table for flow testing by Sudhir';
         ''')
 

@@ -6,6 +6,6 @@ class SnowflakeConnector:
         password=cred["password"],
         account=cred["account"],
         session_parameters={
-                "QUERY_TAG": "rr-dev-sudhir",
+                "QUERY_TAG": "dev-sudhir",
         }
     )

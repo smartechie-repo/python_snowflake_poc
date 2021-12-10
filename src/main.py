@@ -8,7 +8,7 @@ def load_using_snowflake_connector(cred: dict):
 
     """
     You can also set session parameters by executing the SQL statement ALTER SESSION SET ... after connecting:
-    con.cursor().execute("ALTER SESSION SET QUERY_TAG = 'rr-dev-sudhir'")
+    con.cursor().execute("ALTER SESSION SET QUERY_TAG = 'dev-sudhir'")
 
     """
     data = {}
