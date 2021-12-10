@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    python_snowflake_poc=python_snowflake_poc:web
+    

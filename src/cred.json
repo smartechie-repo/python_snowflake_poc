@@ -1,0 +1,12 @@
+{
+  "userid": "",
+  "password": "",
+  "account": "",
+
+  "test": {
+    "warehouse": "",
+    "database": "",
+    "schema": "",
+    "tables": [""]
+  }
+}

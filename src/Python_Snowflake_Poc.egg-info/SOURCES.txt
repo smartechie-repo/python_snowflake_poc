@@ -1,0 +1,7 @@
+main.py
+setup.py
+Python_Snowflake_Poc.egg-info/PKG-INFO
+Python_Snowflake_Poc.egg-info/SOURCES.txt
+Python_Snowflake_Poc.egg-info/dependency_links.txt
+Python_Snowflake_Poc.egg-info/entry_points.txt
+Python_Snowflake_Poc.egg-info/top_level.txt
